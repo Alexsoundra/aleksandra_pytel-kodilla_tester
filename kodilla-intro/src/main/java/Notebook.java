@@ -41,5 +41,26 @@ public class Notebook {
             System.out.println("This notebook is pretty new.");
         }
     }
+
+    public void checkYearAndPrice(){
+        if (this.yearOfProduction < 2010 && this.price <600){
+            System.out.println("It's old but price is good.");
+        }
+        else if (this.yearOfProduction <=2010 && this.price >=600){
+            System.out.println("It's old and to expensive, don't buy this");
+        }
+        else if (this.yearOfProduction ==2015 && this.price ==1000){
+            System.out.println("This good year and have a great price.");
+        }
+        else if (this.yearOfProduction >=2017 && this.price ==1500){
+            System.out.println("Almost new but expensive, buy new");
+        }
+        else if (this.yearOfProduction >= 2017 && this.yearOfProduction <=2019 && this.price >=1500){
+            System.out.println("Almost new and have a great price.");
+        }
+        else{
+            System.out.println("It's brand new and it's work");
+        }
+    }
 }
 
