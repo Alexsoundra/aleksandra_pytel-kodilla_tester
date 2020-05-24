@@ -1,14 +1,13 @@
 package com.kodilla.abstracts.homework;
 
-public class Waiter extends Job {
+public class Model extends Job{
 
-    public Waiter(){
+    public Model(){
         super();
     }
 
     @Override
     public String showResponsibilities() {
-        return "obsługa gości, podawanie zamówień.";
+        return "pozowanie do zdjęć, chodzenie po wybiegu.";
     }
 }
-
