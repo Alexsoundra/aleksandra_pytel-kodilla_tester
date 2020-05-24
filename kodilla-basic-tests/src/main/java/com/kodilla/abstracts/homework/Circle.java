@@ -5,17 +5,15 @@ public class Circle extends Shape{
 
     public Circle() {
         super();
+        r = 4;
     }
     @Override
     public int calcArea() {
-        double area = 3.14 * r *r;
-        return (int) area;
-
+        return (int) (3.14 * r * r);
     }
 
     @Override
     public int calcPerimeter() {
-        double perimeter = 2 * 3.14*r;
-        return (int) perimeter;
+        return (int) (2 * 3.14 * r);
     }
 }

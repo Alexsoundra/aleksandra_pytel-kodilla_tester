@@ -6,16 +6,23 @@ public class Triangle extends Shape {
     int c;
     int h;
 
+    public Triangle(){
+        super();
+        a = 2;
+        b = 3;
+        c = 3;
+        h = 3;
+    }
+
+
     @Override
     public int calcArea() {
-        int area = (b*h)/2;
-        return area;
-
+      return (b*h)/2;
     }
 
     @Override
     public int calcPerimeter() {
-        int perimeter = a + b + c;
-        return perimeter;
+       return a + b + c;
+
     }
 }

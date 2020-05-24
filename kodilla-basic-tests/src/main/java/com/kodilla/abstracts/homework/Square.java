@@ -4,20 +4,18 @@ public class Square extends Shape {
     public int a;
 
 
-    public Square(int a){
-    super();
+    public Square() {
+        super();
+        a = 2;
     }
 
     @Override
     public int calcArea() {
-
-        int area = a^2;
-        return area;
+        return a * a;
     }
 
     @Override
     public int calcPerimeter() {
-        int perimeter = 4 * a;
-        return perimeter;
+        return 4 * a;
     }
 }
