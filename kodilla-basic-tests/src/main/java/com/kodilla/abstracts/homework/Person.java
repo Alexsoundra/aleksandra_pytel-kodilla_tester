@@ -23,8 +23,9 @@ public class Person {
         Person jolene = new Person("Jolene", 18, model);
         Person mark = new Person("Mark", 25, banker);
 
-        System.out.println(anna.firstName + " jest z zawodu kelnerką obowiązki jakie wykonuje to: " + waiter.showResponsibilities());
-        System.out.println(jolene.firstName + " jest z zawodu modelką, obowiązki jakie wykonuje to: " + model.showResponsibilities());
-        System.out.println(mark.firstName + " jest z zawodu bankierem, obowiązki jakie wykonuje to: " + banker.showResponsibilities());
+
+        System.out.println(anna.firstName + " jest z zawodu kelnerką obowiązki jakie wykonuje to: " + anna.job.showResponsibilities());
+        System.out.println(jolene.firstName + " jest z zawodu modelką, obowiązki jakie wykonuje to: " + jolene.job.showResponsibilities());
+        System.out.println(mark.firstName + " jest z zawodu bankierem, obowiązki jakie wykonuje to: " + mark.job.showResponsibilities());
     }
 }

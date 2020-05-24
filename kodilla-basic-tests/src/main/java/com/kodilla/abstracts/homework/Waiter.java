@@ -8,7 +8,7 @@ public class Waiter extends Job {
 
     @Override
     public String showResponsibilities() {
-        return "obsługa gości, podawanie zamówień.";
+        return showResponsibilities();
     }
 }
 

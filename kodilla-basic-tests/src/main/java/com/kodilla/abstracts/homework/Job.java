@@ -16,5 +16,7 @@ public abstract class Job {
     public int whatSalary(){
         return salary; }
 
-    public abstract String showResponsibilities();
+    public String showResponsibilities(){
+        return responsibilities;
+    }
 }

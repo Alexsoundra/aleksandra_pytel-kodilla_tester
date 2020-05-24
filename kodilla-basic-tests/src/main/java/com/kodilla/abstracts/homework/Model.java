@@ -8,6 +8,6 @@ public class Model extends Job{
 
     @Override
     public String showResponsibilities() {
-        return "pozowanie do zdjęć, chodzenie po wybiegu.";
+        return showResponsibilities();
     }
 }
