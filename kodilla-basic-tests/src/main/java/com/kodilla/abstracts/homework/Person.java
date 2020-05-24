@@ -4,30 +4,27 @@ package com.kodilla.abstracts.homework;
 public class Person {
     public String firstName;
     public int age;
-    public String job;
+    public Job job;
 
 
-
-    public Person(String firstName, int age, String job){
+    public Person(String firstName, int age, Job job) {
         this.firstName = firstName;
         this.age = age;
         this.job = job;
     }
-
 
     public static void main(String[] args) {
 
         Job waiter = new Waiter();
         Job model = new Model();
         Job banker = new Banker();
-        Person anna = new Person ("Anna", 20, "waiteress");
-        Person jolene = new Person("Jolene", 18, "modelka");
-        Person mark = new Person ("Mark", 25, "bankier");
 
-        System.out.println("Anna jest z zawodu " + anna.job + " obowiązki tej pracy to: " + waiter.showResponsibilities());
-        System.out.println("Jolene jest z zawodu " + jolene.job + " obowiązki tej pracy to: " + model.showResponsibilities());
-        System.out.println("Mark jest z zawodu " + mark.job + " obowiązki tej pracy to: " + banker.showResponsibilities());
+        Person anna = new Person("Anna", 20, waiter);
+        Person jolene = new Person("Jolene", 18, model);
+        Person mark = new Person("Mark", 25, banker);
+
+        System.out.println(anna.firstName + " jest z zawodu kelnerką obowiązki jakie wykonuje to: " + waiter.showResponsibilities());
+        System.out.println(jolene.firstName + " jest z zawodu modelką, obowiązki jakie wykonuje to: " + model.showResponsibilities());
+        System.out.println(mark.firstName + " jest z zawodu bankierem, obowiązki jakie wykonuje to: " + banker.showResponsibilities());
     }
-
-
 }
