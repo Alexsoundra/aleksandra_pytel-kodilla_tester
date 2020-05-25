@@ -6,8 +6,4 @@ public class Banker extends Job{
         super(15000, "sprzedaż produktów bankowych, przyjmowanie wniosków kredytowych.");
     }
 
-    @Override
-    public String showResponsibilities() {
-        return showResponsibilities();
-    }
 }
