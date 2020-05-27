@@ -53,7 +53,7 @@ public class CashMachineTestSuite {
 
         Bank bank = new Bank(cashMachines);
         int result = bank.meanWithdrawals();
-        assertEquals(1,result);
+        assertEquals(-50,result);
     }
     @Test
     public void shouldShowAvaragePayment(){
@@ -64,6 +64,6 @@ public class CashMachineTestSuite {
 
         Bank bank = new Bank(cashMachines);
         int result = bank.meanDeposits();
-        assertEquals(1,result);
+        assertEquals(100,result);
     }
 }

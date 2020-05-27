@@ -68,16 +68,16 @@ public class Bank {
 
     public int meanDeposits(){
         int sum = 0;
-        for (int i = 0; i < depositsSize; i++) {
-            sum = sum + deposits[i];
+        for (int deposit : deposits) {
+            sum = sum + deposit;
         }
         return sum/depositsSize;
     }
 
     public int meanWithdrawals(){
         int sum = 0;
-        for (int i =0; i < withdrawalsSize; i++) {
-            sum = sum + withdrawals[i];
+        for (int withdrawal : withdrawals) {
+            sum = sum + withdrawal;
         }
         return sum/withdrawalsSize;
     }
