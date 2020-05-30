@@ -1,7 +1,8 @@
 package com.kodilla.collections.interfaces.homework;
 
-public class CarRace {
+public class CarRace{
     public static void main(String[] args) {
+
         Ford ford = new Ford(0);
         doRace(ford);
 
@@ -11,7 +12,7 @@ public class CarRace {
         Kia kia = new Kia(0);
         doRace(kia);
     }
-    public static void doRace (Car car){
+    public static void doRace(Car car){
         car.increaseSpeed();
         car.increaseSpeed();
         car.increaseSpeed();

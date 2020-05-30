@@ -15,8 +15,8 @@ public class Kia implements Car {
 
     @Override
     public void increaseSpeed() {
-      this.speed = this.speed + 40;
-            }
+        this.speed = this.speed + 40;
+    }
 
     @Override
     public void decreaseSpeed() {
