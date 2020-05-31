@@ -22,4 +22,11 @@ public class Kia implements Car {
     public void decreaseSpeed() {
         this.speed = this.speed - 10;
     }
+
+    @Override
+    public String toString() {
+        return "Kia{" +
+                "speed=" + speed +
+                '}';
+    }
 }
