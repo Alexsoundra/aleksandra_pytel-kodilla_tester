@@ -4,23 +4,26 @@ import java.util.Objects;
 
 public class Stamp {
     private String stampName;
-    private String sizeStamp;
-    private String stampedStamp;
+    private SizeStamp getSizeStamp;
+    private boolean isStamped;
 
-    public Stamp(String stampName, String sizeStamp, String stampedStamp) {
+    public Stamp(String stampName, SizeStamp getSizeStamp, boolean isStamped) {
         this.stampName = stampName;
-        this.sizeStamp = sizeStamp;
-        this.stampedStamp = stampedStamp;
+        this.getSizeStamp();
+        this.isStamped = isStamped;
     }
+
+
 
     public String getStampName(){
         return stampName;
     }
-    public String getSizeStamp(){
-        return sizeStamp;
+    public void getSizeStamp() {
     }
-    public String getStampedStamp(){
-        return stampedStamp;
+
+    public void isStamped(){
+        boolean isStamped = true;
+        System.out.println("is stamped");
     }
 
     @Override
@@ -28,22 +31,22 @@ public class Stamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stamp stamp = (Stamp) o;
-        return Objects.equals(stampName, stamp.stampName) &&
-                Objects.equals(sizeStamp, stamp.sizeStamp) &&
-                Objects.equals(stampedStamp, stamp.stampedStamp);
+        return isStamped == stamp.isStamped &&
+                Objects.equals(stampName, stamp.stampName) &&
+                Objects.equals(getSizeStamp, stamp.getSizeStamp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(stampName, sizeStamp, stampedStamp);
+        return Objects.hash(stampName, getSizeStamp, isStamped);
     }
 
     @Override
     public String toString() {
         return "Stamp{" +
                 "stampName='" + stampName + '\'' +
-                ", sizeStamp='" + sizeStamp + '\'' +
-                ", stampedStamp='" + stampedStamp + '\'' +
+                ", getSizeStamp=" + getSizeStamp +
+                ", isStamped=" + isStamped +
                 '}';
     }
 }
