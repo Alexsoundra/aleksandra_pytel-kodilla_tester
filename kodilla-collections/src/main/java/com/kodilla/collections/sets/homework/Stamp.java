@@ -13,17 +13,15 @@ public class Stamp {
         this.isStamped = isStamped;
     }
 
-
-
     public String getStampName(){
         return stampName;
     }
-    public void getSizeStamp() {
+    public SizeStamp getSizeStamp() {
+        return getSizeStamp;
     }
 
-    public void isStamped(){
-        boolean isStamped = true;
-        System.out.println("is stamped");
+    public boolean isStamped(){
+        return isStamped;
     }
 
     @Override
