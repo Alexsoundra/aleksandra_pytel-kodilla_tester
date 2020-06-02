@@ -37,10 +37,9 @@ public class Bank {
     }
 
     public int withdrawals(){
-
+        this.withdrawals = new int[50];
         for(int i =0; i < cashMachines.length; i++){
             CashMachine c = cashMachines[i];
-
             for (int j=0; j < c.transactions.length;j++){
                 int transact = c.transactions[j];
                 if(transact < 0){
@@ -52,6 +51,7 @@ public class Bank {
     }
 
     public int deposits(){
+        this.deposits = new int[50];
         for(int i =0; i < cashMachines.length; i++){
             CashMachine c = cashMachines[i];
 
@@ -67,6 +67,7 @@ public class Bank {
     }
 
     public int meanDeposits(){
+        deposits();
         int sum = 0;
         for (int deposit : deposits) {
             sum = sum + deposit;
@@ -75,6 +76,7 @@ public class Bank {
     }
 
     public int meanWithdrawals(){
+        withdrawals();
         int sum = 0;
         for (int withdrawal : withdrawals) {
             sum = sum + withdrawal;
