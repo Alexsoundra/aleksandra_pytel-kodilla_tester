@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private List<Double> students = new ArrayList<>();
+    private List<Integer> students = new ArrayList<>();
 
-    public School(double ... students){
-        for(double student : students)
+    public School(int ... students){
+        for(int student : students)
             this.students.add(student);
     }
 
@@ -17,7 +17,10 @@ public class School {
                 "students=" + students +
                 '}';
     }
-    public double getNumberOfStudents(){
-        return students.size();
+    public int getNumberOfStudents(){
+        int sum = 0;
+        for( int student : students)
+                sum += student;
+        return sum;
     }
 }

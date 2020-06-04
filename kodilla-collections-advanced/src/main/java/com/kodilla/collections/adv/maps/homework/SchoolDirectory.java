@@ -12,10 +12,10 @@ public class SchoolDirectory {
         Principal mr3 = new Principal("Mr.Johnson", "Garden's Highschool");
         Principal mr4 = new Principal("Mr.Solveig", "90210 Highschool");
 
-        School mr1School = new School(10.0,20.0,50.0);
-        School mr2School = new School(43.0, 25.0,12.0);
-        School mr3School = new School(16.0, 23.0, 36.0);
-        School mr4School = new School(5.0, 10.0, 3.0);
+        School mr1School = new School(10,20,50);
+        School mr2School = new School(43, 25,12);
+        School mr3School = new School(16, 23, 36);
+        School mr4School = new School(5, 10, 3);
 
         school.put(mr1, mr1School);
         school.put(mr2, mr2School);
@@ -23,7 +23,7 @@ public class SchoolDirectory {
         school.put(mr4, mr4School);
 
         for ( Map.Entry<Principal, School> pricipalEntry : school.entrySet())
-            System.out.println(pricipalEntry.getKey().getPrincipalName() + pricipalEntry.getKey().getSchoolName() + ", numbers of students at school: " + pricipalEntry.getValue().getNumberOfStudents());
+            System.out.println(pricipalEntry.getKey().getPrincipalName() + " is principal of school name: " + pricipalEntry.getKey().getSchoolName() + " and number of students at school: " + pricipalEntry.getValue().getNumberOfStudents());
     }
     }
 
