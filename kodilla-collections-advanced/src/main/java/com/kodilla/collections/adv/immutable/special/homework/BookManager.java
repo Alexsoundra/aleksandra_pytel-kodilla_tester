@@ -1,13 +1,19 @@
 package com.kodilla.collections.adv.immutable.special.homework;
 
-public class BookManager {
+import java.util.ArrayList;
+import java.util.List;
 
-    public BookManager(Book book){
-        super();
+public class BookManager {
+    List<Book> books = new ArrayList<>();
+
+    public BookManager(String title, String author) {
     }
 
-    public Book createBook(String title, String author){
-        Book book = new Book("Angels and demons", "Dan Brown");
-        return book;
+    public BookManager createBook(String title, String author) {
+        BookManager bookManager = new BookManager(title, author);
+
+        for (Book book : books) {
+            if () ;
+        }
     }
 }
