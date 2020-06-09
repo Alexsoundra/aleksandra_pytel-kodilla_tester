@@ -9,10 +9,6 @@ public class Flight {
         this.arrival = arrival;
     }
 
-    public Flight() {
-
-    }
-
     public String getDeparture(){
         return departure;
     }

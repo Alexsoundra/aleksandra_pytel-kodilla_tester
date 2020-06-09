@@ -1,16 +1,23 @@
 package com.kodilla.collections.adv.exercises.homework;
 
+import java.nio.channels.FileLockInterruptionException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class FlightRepository {
-    Map<String, List<Flight>> flights = new HashMap<>();
 
-    public static getFlightsTable(String departure, String arrival){
+
+    public static List<Flight> getFlightsTable() {
         List<Flight> flights = new ArrayList<>();
-        flights.add();
-
+        flights.add(new Flight("KRK", "RZE"));
+        flights.add(new Flight("RZE", "KRK"));
+        flights.add(new Flight("WAW", "GDA"));
+        flights.add(new Flight("GDA", "WAW"));
+        flights.add(new Flight("KRK","POZ"));
+        flights.add(new Flight("KRK", "GDA"));
+        return flights;
     }
+
 }
+
