@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Task {
     private String name;
-    private LocalDate opened;
-    private LocalDate deadline;
+    public LocalDate opened;
+    public LocalDate deadline;
 
     public Task(String name, LocalDate opened, LocalDate deadline) {
         this.name = name;
@@ -19,8 +19,7 @@ public class Task {
     }
 
     public LocalDate getOpened() {
-        LocalDate getOpened = LocalDate.of(2020,06,15);
-        return getOpened;
+        return opened;
     }
 
     public LocalDate getDeadline() {
