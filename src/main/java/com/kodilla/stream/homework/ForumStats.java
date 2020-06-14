@@ -6,7 +6,7 @@ public class ForumStats {
     public static void main(String[] args) {
         double average40 = UserRepository.getUsersList()
                 .stream()
-//                .filter(t -> t.getAge()(>=40))
+                .filter(t -> t.getAge()>=40)
                 .map(u -> u.getNumberOfPosts())
                 .mapToInt(n -> n)
                 .average()
@@ -16,7 +16,7 @@ public class ForumStats {
 
         double averageUnder40 = UserRepository.getUsersList()
                 .stream()
-//                .filter(t -> t.getAge()(<40))
+                .filter(t -> t.getAge()<40)
                 .map(u -> u.getNumberOfPosts())
                 .mapToInt(n -> n)
                 .average()
