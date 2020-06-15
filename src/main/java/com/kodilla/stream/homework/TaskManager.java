@@ -10,8 +10,9 @@ public class TaskManager {
                 .stream()
                 .filter(t -> t.getDeadline())
                 .map(TaskManager::getName)
+                .isAfter(LocalDate.now())
                 .forEach(t -> System.out.println(t));
-        ;
+
     }
     public static String getName (Task task){
         return task.getName();
