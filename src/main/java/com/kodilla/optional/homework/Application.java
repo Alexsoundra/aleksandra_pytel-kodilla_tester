@@ -10,16 +10,20 @@ public class Application {
         Teacher teacher2 = new Teacher("Mr. Q");
 
         List<Student> students = new ArrayList<>();
-        students.add(new Student("Mark", null));
-        students.add(new Student("Nick", null));
-        students.add(new Student("Adeline", teacher1));
-        students.add(new Student("Jane", teacher2));
+        students.add(new Student("Mark, ", null));
+        students.add(new Student("Nick, ", null));
+        students.add(new Student("Adeline, ", teacher1));
+        students.add(new Student("Jane, ", teacher2));
 
-        for (Student student : students){
-            Optional<Teacher> optionalTeacher = Optional.ofNullable(students);
-            String teacherName = optionalTeacher.orElse(new Student("", null)).getName();
-        System.out.println(teacherName + "undefined");
-            
+        for(Student student: students){
+            Teacher nullTeacher = student.getTeacher();
+
+            Optional<Teacher> optionalTeacher = Optional.ofNullable(nullTeacher);
+
+            Optional<String> optionalTeacherName = optionalTeacher.map(teacher -> teacher.getName());
+
+            String teacherName = optionalTeacherName.orElse("undefined");
+            System.out.println(student.getName() + teacherName);
         }
     }
 }
