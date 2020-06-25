@@ -9,7 +9,7 @@ public class Stamp {
 
     public Stamp(String stampName, SizeStamp getSizeStamp, boolean isStamped) {
         this.stampName = stampName;
-        this.getSizeStamp();
+        this.getSizeStamp = getSizeStamp;
         this.isStamped = isStamped;
     }
 
@@ -43,7 +43,7 @@ public class Stamp {
     public String toString() {
         return "Stamp{" +
                 "stampName='" + stampName + '\'' +
-                ", getSizeStamp=" + getSizeStamp +
+                ", getSizeStamp=" + getSizeStamp.toString() +
                 ", isStamped=" + isStamped +
                 '}';
     }

@@ -1,20 +1,19 @@
 package com.kodilla.parametrized_tests.homework;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Test;
 
+import java.util.Collections;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GamblingMachineTestSuite {
     private GamblingMachine gamblingMachine = new GamblingMachine();
+    @Test
+    public void shouldShowUserNumbers() throws InvalidNumbersException{
 
-    @ParameterizedTest
-    @CsvFileSource(resources = "/gamblingMachine.csv", numLinesToSkip = 1)
-    public void shouldCountHowManyWins (Set<Integer> input,Set<Integer> expected) throws InvalidNumbersException {
-        assertEquals(expected, gamblingMachine.howManyWins(input));
+
+
     }
 
 }

@@ -16,11 +16,36 @@ class FlightFinderTestSuite {
         List<Flight> result = finder.findFlightsFrom("KRK");
 
         // then
+        assertEquals(result.get(0).getDeparture(), "KRK");
+        assertEquals(result.get(0).getArrival(), "RZE");
+    }
+    @Test
+    public void testFindFlightsTo() {
+        // given
+        FlightFinder finder = new FlightFinder();
+
+        // when
+        List<Flight> result = finder.findFlightsTo("RZE");
+
+        // then
+        assertEquals(result.get(0).getDeparture(), "KRK");
+        assertEquals(result.get(0).getArrival(), "RZE");
+    }
+
+    @Test
+    public void testFindFlightsFromKRK() {
+        // given
+        FlightFinder finder = new FlightFinder();
+
+        // when
+        List<Flight> result = finder.findFlightsFrom("KRK");
+
+        // then
         assertEquals(3, result.size());
     }
 
     @Test
-    public void testFlightsTo() {
+    public void testFlightsToGDA() {
         // given
         FlightFinder finder = new FlightFinder();
         //when

@@ -19,7 +19,7 @@ public class SchoolDirectory {
 
         school.put(mr1, mr1School);
         school.put(mr2, mr2School);
-        school.put(mr3,mr3School);
+        school.put(mr3, mr3School);
         school.put(mr4, mr4School);
 
         for ( Map.Entry<Principal, School> pricipalEntry : school.entrySet())
