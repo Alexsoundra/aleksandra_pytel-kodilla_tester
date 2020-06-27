@@ -9,8 +9,9 @@ public class Shop {
     public void addOrder (Order order){
         this.orders.add(order);
     }
+
 //    public Order getOrder(){
-//        return ;
+//        return;
 //    }
 
     public int getOrderSize(){

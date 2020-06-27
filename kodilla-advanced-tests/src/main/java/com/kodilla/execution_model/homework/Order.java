@@ -1,19 +1,17 @@
 package com.kodilla.execution_model.homework;
 
-import com.kodilla.parametrized_tests.homework.PersonSource;
-
 public class Order {
-    private int value;
+    private double value;
     private String date;
     private String username;
 
-    public Order(int value, String date, String username) {
+    public Order(double value, String date, String username) {
         this.value = value;
         this.date = date;
         this.username = username;
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
