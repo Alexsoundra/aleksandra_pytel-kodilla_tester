@@ -5,7 +5,6 @@ import java.util.List;
 public class Person {
     private String username;
     private List<String> subscribedLocations;
-    private List<String> weatherNotifications;
 
     public Person(String username) {
         this.username = username;
@@ -16,4 +15,11 @@ public class Person {
         return username;
     }
 
+    public void subscribeToLocation(String location){
+        subscribedLocations.add(location);
+    }
+
+    public List<String> getSubscribedLocations() {
+        return subscribedLocations;
+    }
 }
