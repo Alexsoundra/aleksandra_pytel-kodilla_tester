@@ -2,7 +2,9 @@ package com.kodilla.spring.basic.spring_dependency_injection.homework;
 
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ShippingCenter {
 
     @Qualifier(value = "emailService")
