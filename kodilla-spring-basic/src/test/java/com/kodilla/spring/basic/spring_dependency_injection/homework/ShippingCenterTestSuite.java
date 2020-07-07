@@ -10,9 +10,16 @@ class ShippingCenterTestSuite {
     @Test
     public void shouldSendPackage(){
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        EmailService bean = context.getBean(EmailService.class);
-        boolean message = bean.deliverPackage("Notthing Hill 3", 30);
-        Assertions.assertTrue(message);
+        ShippingCenter bean = context.getBean(ShippingCenter.class);
+        String success = bean.sendPackage("Nothing Hill 3", 30);
+        Assertions.assertEquals("Package delivered to: Nothing Hill 3", success);
     }
 
+    @Test
+    public void shouldNotDeliveryPackage(){
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+        ShippingCenter bean = context.getBean(ShippingCenter.class);
+        String fail = bean.sendPackage("Nothing Hill 3", 60);
+        Assertions.assertEquals("Package not delivered to: Nothing Hill 3", fail);
+        }
 }

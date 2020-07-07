@@ -1,17 +1,13 @@
 package com.kodilla.spring.basic.spring_dependency_injection.homework;
 
-import com.kodilla.spring.basic.dependency_injection.homework.DeliveryService;
-import com.kodilla.spring.basic.dependency_injection.homework.NotificationService;
+
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
-
-@Component
 public class ShippingCenter {
 
-    @Resource(name = "emailService")
+    @Qualifier(value = "emailService")
     private DeliveryService deliveryService;
+
     @Qualifier(value = "phoneTextMessageService")
     private NotificationService notificationService;
 
