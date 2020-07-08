@@ -7,4 +7,3 @@ public class SimpleApplicationRunner {
         application.processMessage("Test message", "receiver@mail.com");
     }
 }
-
