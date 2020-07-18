@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CarRentalTestSuite {
     @Test
     public void testCarCreated() {
@@ -23,10 +21,13 @@ class CarRentalTestSuite {
     public void testCarSeason(){
         //given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        CarRental car = context.getBean(CarRental.class);
+        Car car = (Car) context.getBean("SUV");
 
         //when
+        int getSeason = 2;
 
+        //then
+        Assertions.assertEquals("SUV", getSeason);
     }
 
 }

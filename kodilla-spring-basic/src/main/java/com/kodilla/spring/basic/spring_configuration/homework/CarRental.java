@@ -14,7 +14,7 @@ public class CarRental {
         return new SUV();
     }
     @Bean
-    public Car season() {
+    public Car getSeason() {
         LocalDateTime now = LocalDateTime.now();
         int month = now.getMonth().getValue();
         int time = now.getHour();
@@ -24,7 +24,8 @@ public class CarRental {
          car = new Cabrio();
      } else if (month >9 && month <11 && month >3 && month <5){
          car = new Sedan();
-     } else (month <3 && month >12){
+     } else
+        {
          car = new SUV();
      }
      if (time >20 && time <6){
