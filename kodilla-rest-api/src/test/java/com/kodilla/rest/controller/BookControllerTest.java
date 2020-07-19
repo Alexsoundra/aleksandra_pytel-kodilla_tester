@@ -38,7 +38,7 @@ class BookControllerTest {
         BookController bookController = new BookController(bookServiceMock);
 
 
-        Mockito.doThrow().when(bookServiceMock).addBook();
+        Mockito.doThrow().when(bookController.addBook()).then(bookServiceMock.addBook());
 
 
     }
