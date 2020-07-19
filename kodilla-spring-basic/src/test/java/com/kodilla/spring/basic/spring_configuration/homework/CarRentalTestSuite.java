@@ -24,10 +24,12 @@ class CarRentalTestSuite {
         Car car = (Car) context.getBean("SUV");
 
         //when
-        int getSeason = 2;
+        String carType = car.getCarType();
+        boolean lights = car.hasHeadlightsTurnedOn();
 
         //then
-        Assertions.assertEquals("SUV", getSeason);
+        Assertions.assertEquals("SUV", carType);
+        Assertions.assertTrue(true, String.valueOf(lights));
     }
 
 }
