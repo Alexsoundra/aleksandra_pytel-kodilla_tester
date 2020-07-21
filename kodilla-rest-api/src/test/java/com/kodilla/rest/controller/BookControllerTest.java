@@ -40,8 +40,6 @@ class BookControllerTest {
         bookController.addBook(new BookDto("The Green Mile", "Stephen King"));
 
 
-        Mockito.verify(bookServiceMock).addBook();
-
-
+        Mockito.verify(bookServiceMock, Mockito.times(1)).addBook();
     }
 }
