@@ -8,9 +8,15 @@ group = 'com.kodilla'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '8'
 
+test {
+    useJUnitPlatform()
+}
+
+
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')

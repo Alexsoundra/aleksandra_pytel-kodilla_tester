@@ -29,7 +29,7 @@ class CarRentalTestSuite {
 
         //then
         Assertions.assertEquals("SUV", carType);
-        Assertions.assertTrue(true, String.valueOf(lights));
+        Assertions.assertTrue(lights);
     }
 
 }
