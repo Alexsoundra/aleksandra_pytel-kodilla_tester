@@ -1,6 +1,5 @@
 package com.kodilla.selenium.allegro;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,8 +12,10 @@ public class AllegroTestingApp {
         WebDriver driver = new ChromeDriver();
         driver.get("https://allegro.pl");
 
-        driver.switchTo().alert().accept();
+//        driver.switchTo().alert().accept();
 
+        WebElement closeAlert = driver.findElement(By.xpath("//html/body/div/div/div/div/div/div/button[2]"));
+        closeAlert.submit();
 
         WebElement inputField = driver.findElement(By.name("string"));
         inputField.sendKeys("Mavic mini");
