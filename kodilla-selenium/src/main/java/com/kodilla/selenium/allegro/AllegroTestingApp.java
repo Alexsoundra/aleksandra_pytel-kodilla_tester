@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class AllegroTestingApp {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
@@ -14,18 +16,18 @@ public class AllegroTestingApp {
 
 //        driver.switchTo().alert().accept();
 
-        WebElement closeAlert = driver.findElement(By.xpath("//html/body/div/div/div/div/div/div/button[2]"));
+        WebElement closeAlert = driver.findElement(By.cssSelector("div._9f0v0._jkrtd.mpof_ki_s > button._13q9y._8hkto.munh_56_m.m7er_k4.m7er_wn.m7er_56_m"));
         closeAlert.submit();
 
         WebElement inputField = driver.findElement(By.name("string"));
         inputField.sendKeys("Mavic mini");
         inputField.submit();
 
-        WebElement categoryCombo = driver.findElement(By.xpath("//*[@id=\"mgn2_14 mgn2_14 mgn2_jk mp0t_0a mqu1_21 mgmw_wo mli8_k4 _1vx3o mp7g_f6 mj7u_0 mq1m_0 mqm6_0 mg9e_8 mj7a_8 _d25db_1umH4\"]/div/select[1]"));
+        WebElement categoryCombo = driver.findElement(By.cssSelector("div.mr3m_1 m7er_k4 m7er_k4 m7er_wn _k70df mgn2_14 mgn2_14 mgn2_jk mp0t_0a mqu1_21 mgmw_wo mli8_k4 _d25db_an94v > option"));
         Select categorySelect = new Select(categoryCombo);
-        categorySelect.selectByIndex(4);
+        categorySelect.selectByIndex(3);
 
-        inputField = driver.findElement(By.xpath("//html/body/div/header/div/div/div/div/form/div/button"));
-        inputField.submit();
+       List<WebElement> elements = (List<WebElement>) driver.findElement(By.className("_9c44d_3pyzl"));
+        elements.get(0).getText();
     }
 }
