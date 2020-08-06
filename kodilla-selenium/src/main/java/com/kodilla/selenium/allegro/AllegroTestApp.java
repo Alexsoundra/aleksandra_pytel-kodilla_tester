@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AllegroTestApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://allegro.pl");
@@ -24,12 +24,12 @@ public class AllegroTestApp {
         WebElement inputField = driver.findElement(By.cssSelector("form > input"));
         inputField.sendKeys("Mavic mini");
         inputField.submit();
-
-        WebElement categoryCombo = driver.findElement(By.xpath("//html/body/div/div/header/div/div/div/div/form/div/div/select"));
+        Thread.sleep(2000);
+        WebElement categoryCombo = driver.findElement(By.cssSelector("div > select"));
         Select categorySelect = new Select(categoryCombo);
-        categorySelect.selectByIndex(4);
+        categorySelect.selectByIndex(3);
 
-        WebElement button = driver.findElement(By.xpath("//html/body/div/header/div/div/div/div/form/div/button"));
+        WebElement button = driver.findElement(By.xpath("//button[@data-role='search-button']"));
         button.click();
     }
 }
