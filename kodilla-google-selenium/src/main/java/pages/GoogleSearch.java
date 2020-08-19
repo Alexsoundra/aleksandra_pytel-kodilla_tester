@@ -10,13 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class GoogleSearch extends AbstractPage{
+public class GoogleSearch extends AbstractPage {
     @FindBy(css = "input[title='Szukaj']")
     static WebElement inputField;
 
     @FindBy(css = "input[value='Szukaj w Google']")
     static List<WebElement> searchButton;
     private static GoogleResults googleResults;
+
+    private GoogleSearch openedSearchResultPage;
 
     public GoogleSearch(WebDriver driver) {
         super(driver);
@@ -30,15 +32,16 @@ public class GoogleSearch extends AbstractPage{
     }
 
 
-    public static GoogleResults loadResults(WebDriver driver){
+    public static GoogleResults loadResults(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(0))).click();
         GoogleResults googleResults = new GoogleResults(driver);
         return googleResults;
     }
 
-    public void checkResults() {
-        WebElement check = driver.findElement(By.className("LC20lb DKV0Md"));
-        check.submit();
+    public void clickOnSearchResult() {
+        WebElement searchResult = driver.findElement(By.cssSelector("div > h3"));
+        searchResult.click();
     }
 }
+
