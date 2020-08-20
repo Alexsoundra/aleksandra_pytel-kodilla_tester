@@ -3,13 +3,13 @@ package fizzbuzzchecker;
 public class FizzBuzzChecker {
 
     public String checkIfFizzBuzz (int number){
-        if (number % 3){
+        if (number % 3 ==0){
             return "Fizz";
-        }else (number % 5){
+        }else if(number % 5 ==0){
             return "Buzz";
-        }else (number % 3) && (number % 5){
+        }else if(number % 3==0) && (number % 5){
             return "FizzBuzz";
-        }else if{
+        }else{
             return "Nope";}
     }
 }
