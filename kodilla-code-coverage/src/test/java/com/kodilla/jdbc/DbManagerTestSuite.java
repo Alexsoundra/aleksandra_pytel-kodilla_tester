@@ -59,9 +59,9 @@ public class DbManagerTestSuite {
     }
     @Test
     public void testSelectUsersAndPosts() throws SQLException {
-        //Givem
+        //Given
         DbManager dbManager = DbManager.getInstance();
-        String countQuery = "SELECT COUNT(*) FROM POSTS";
+        String countQuery = "SELECT * USERS COUNT(*) AS POSTS_NUMBER";
         Statement statement = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(countQuery);
         int count = 0;
@@ -80,7 +80,7 @@ public class DbManagerTestSuite {
         statement.executeUpdate(sql);
 
         //When
-        String sqlQuery = "SELECT * FROM POSTS";
+        String sqlQuery = "SELECT * FROM POSTS JOIN USERS HAVING COUNT(*)>1";
         statement = dbManager.getConnection().createStatement();
         rs = statement.executeQuery(sqlQuery);
 
@@ -89,7 +89,7 @@ public class DbManagerTestSuite {
         while (rs.next()) {
             System.out.println(rs.getString("FIRSTNAME") + ", " +
                     rs.getString("LASTNAME") + ", " +
-                    rs.getInt("POSTS_NUMBER"));
+                    rs.getInt("POSTS"));
             counter++;
         }
         int expected = count + 5;
