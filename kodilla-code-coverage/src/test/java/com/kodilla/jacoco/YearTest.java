@@ -50,7 +50,7 @@ public class YearTest {
     @Test
     public void shouldNotBeLeapYearIfDivisibleBy4(){
         //given
-        Year year = new Year(2003);
+        Year year = new Year(2007);
         //when
         boolean isLeapYear = year.isLeap();
         //then
@@ -59,7 +59,7 @@ public class YearTest {
     @Test
     public void shouldBeLeapYearIfDivisibleBy4(){
         //given
-        Year year = new Year(2000);
+        Year year = new Year(2004);
         //when
         boolean isLeapYear = year.isLeap();
         //then
