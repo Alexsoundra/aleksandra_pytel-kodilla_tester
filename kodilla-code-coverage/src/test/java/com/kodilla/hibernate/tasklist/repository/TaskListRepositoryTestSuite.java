@@ -25,13 +25,13 @@ public class TaskListRepositoryTestSuite {
         String listName = taskList.getListName();
 
         //When
-        List<TaskList> listName1 = taskList.getListName(listName);
+        List<TaskList> findName = taskListRepository.findByListName(listName);
 
         //Then
-        Assert.assertEquals(1, listName1.size());
+        Assert.assertEquals(1, findName.size());
 
         //CleanUp
-        int id = listName1.get(0).getId();
+        int id = findName.get(0).getId();
         taskListRepository.deleteById(id);
     }
 }
