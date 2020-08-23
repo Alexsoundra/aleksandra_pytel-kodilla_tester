@@ -66,4 +66,14 @@ public class YearTest {
         assertTrue(isLeapYear);
     }
 
+    @Test
+    public void shouldBeLeapYearIfDivisibleBy100ButNotBy400(){
+        //given
+        Year year = new Year(2016);
+        //when
+        boolean isLeapYear = year.isLeap();
+        //then
+        assertTrue(isLeapYear);
+    }
+
 }
